@@ -30,7 +30,7 @@ public class TeacherController {
         return teacherService.getTeacher(id);
     }
 
-    @PostMapping("/teacher/update/{id}")
+    @PutMapping("/teacher/update/{id}")
     public Teacher update(@RequestBody Teacher teacher, @PathVariable long id){
         teacher.setId(id);
         return teacherService.updateTeacher(teacher);
